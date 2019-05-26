@@ -1,7 +1,7 @@
 import requests
 from settings import base_url, token
 
-def create_folder(url, repo_id, folder_name, token): # folder_name starts and ends with "/" 
+def create_folder(url, repo_id, folder_name, token): # folder_name starts with "/" 
     headers={
         'Authorization': 'Token {token}'. format(token=token),
         'Accept': 'application/json; charset=utf-8; indent=4',

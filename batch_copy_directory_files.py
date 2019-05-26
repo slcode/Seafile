@@ -1,5 +1,6 @@
 import requests
 import json
+from settings import base_url, token
 
 def copy_directory(base_url, token, repo, dirname): # does not work
     ''' dirname could be "/" or "/foo"
@@ -43,12 +44,11 @@ def batch_copy_directory(base_url, token, src_repo, src_dir, dst_repo, dst_dir, 
 
 
 if __name__=="__main__":
-    base_url = "https://seafile.com"
-    token = '24fd3c026886e3121b2ca630805ed425c272cb96'
-    src_repo = '73ddb2b8-dda8-471b-b7a7-ca742b07483c'
+
+    src_repo = 'd4f596ed-09ea-4ac6-8d59-12acbd089097'
     src_dir = ''
-    dst_repo = '73ddb2b8-dda8-471b-b7a7-ca742b07483c'
-    dst_dir = 'F20190517200223'
+    dst_repo = 'dae8cecc-2359-4d33-aa42-01b7846c4b32'
+    dst_dir = 'test'
     fnames = ['file2.zip', 'file11.txt', 'address.txt']
     batch_copy_directory(base_url, token, src_repo, src_dir, dst_repo, dst_dir, fnames)
     
